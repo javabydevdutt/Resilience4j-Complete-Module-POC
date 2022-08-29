@@ -1,0 +1,18 @@
+server:
+  port: 9191
+  
+  
+#configure application name
+spring:
+  application:
+    name: RESILIENCE4J-BULKHEAD
+    
+    
+#Configure bulkhead details
+resilience4j:
+  bulkhead:
+    instances:
+      getMessageBH:
+        max-concurrent-calls: 5
+        max-wait-duration: 0
+      
